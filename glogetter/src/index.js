@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
 
 import App from './components/App';
+import NotFound from './components/NotFound';
 
 const Root = () => {
     return (
@@ -16,4 +17,4 @@ const Root = () => {
 }
 
 render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
