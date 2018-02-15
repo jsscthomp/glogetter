@@ -1,20 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import App from './components/App';
 import NotFound from './components/NotFound';
 
 const Root = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <div>
-                <Match exactly pattern="/" component={App} />
-                <Miss component={NotFound} />
+                <Route exact path="/" component={App} />
+                <Route path="/notfound" component={NotFound} />
             </div>
-        </BrowserRouter>
+        </Router>
     )
 }
 
-render(<Root />, document.getElementById('root'));
+render(<Root />, document.getElementById('main'));
 
