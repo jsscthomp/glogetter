@@ -16,5 +16,5 @@ const Root = () => {
     )
 }
 
-render(<App />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));
 
