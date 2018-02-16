@@ -14,7 +14,7 @@ class SearchBox extends React.Component {
         const productId = this.productInput.value;
         console.log(`Going to ${productId} page`);
         //transition from/to /product/:productId
-        this.context.router.transitionTo(`/product/${productId}`);
+        this.props.history.push(`/product/${productId}`);
     }
 
     render() {
