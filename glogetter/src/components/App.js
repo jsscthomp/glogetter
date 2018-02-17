@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
 import Header from './Header';
+// eslint-disable-next-line
+import ProductList from './ProductList';
+
 
 class App extends Component {
+constructor() {
+  super();
+
+  this.addProduct = this.addProduct.bind(this);
+
+  this.state = {
+    product: {}
+  }
+}
+
+addProduct(product) {
+  //update state
+  const products = {...this.state.products};
+  //add products to page
+  const timestamp = Date.now();
+  products[`product-${timestamp}`] = product;
+  //set state
+  this.setState({ products })
+}
+
   render() {
     return (
       <div className="glo-getter">
