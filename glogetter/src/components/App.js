@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 // eslint-disable-next-line
 import ProductList from './ProductList';
+import Inventory from './Inventory';
 
 
 class App extends Component {
@@ -30,6 +31,7 @@ listProduct(product) {
       <div className="glo-getter">
         <div className="glo">
           <Header tagline="Glo Get It Now" />
+          <Inventory />
         </div>
       </div>
     );
