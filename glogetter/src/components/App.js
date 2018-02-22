@@ -8,14 +8,14 @@ class App extends Component {
 constructor() {
   super();
 
-  this.addProduct = this.addProduct.bind(this);
+  this.listProduct = this.listProduct.bind(this);
 
   this.state = {
     product: {}
   }
 }
 
-addProduct(product) {
+listProduct(product) {
   //update state
   const products = {...this.state.products};
   //add products to page
